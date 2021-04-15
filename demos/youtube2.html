@@ -1,84 +1,485 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Complex YouTube Example</title>
-<link rel="stylesheet" href="demos.css" type="text/css">
+<title>Simple YouTube Example</title>
 
 <!-- Dependencies -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" id="www-widgetapi-script" src="https://www.youtube.com/s/player/82e684c7/www-widgetapi.vflset/www-widgetapi.js" async=""></script><script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="../thirdparty/js.cookie.js"></script>
 
 <!-- Able Player CSS -->
-<link rel="stylesheet" href="../build/ableplayer.min.css" type="text/css"/>
+<link rel="stylesheet" href="../build/ableplayer.min.css" type="text/css">
 
 <!-- Able Player JavaScript -->
 <script src="../build/ableplayer.js"></script>
 
-<!-- styles for this example page -->
-<style>
-  #wrapper {
-    width: 100%;
-  }
-  #chapters {
-    float: left;
-    min-width: 12em;
-    width: 30%;
-    padding-right: 1em;
-  }
-  #chapters ul {
-    border: 1px solid #AAA;
-  }
-  #player-plus {
-    float: left;
-    width: 65%;
-  }
-  div.able-chapters-div button:focus,
-  div.able-chapters-div button:hover,
-  div.able-chapters-div button::-moz-focus-inner {
-    background-color: #666;
-    color: #FFF;
-  }
-</style>
-</head>
+<link rel="stylesheet" href="https://federalist-proxy.app.cloud.gov/preview/uswds/uswds/release-2.3.1/dist/css/uswds.min.css">
+<meta charset="UTF-8"></head>
+  <body class="  ">
 
-<body>
+    <a class="usa-skipnav" href="#main-content">Skip to main content</a>
 
-<h1>Able Player for YouTube (Complex Example)</h1>
+    
 
-<p>This page features a relatively <strong>complex</strong> example of Able Player being used to play a YouTube video. Its features include:</p>
 
-<ul>
-  <li>A described and non-described version of the video, both hosted on YouTube. Swap between the two versions using the <em>Description</em> button.</li>
-  <li>Captions and subtitles, both hosted on YouTube.</li>
-  <li>Chapters, hosted in a local WebVTT file, and referenced in a &lt;track&gt; element.</li>
-  <li>An interactive transcript that combines all of the above text tracks.</li>
-  <li>An external container to which Able Player adds chapters.</li>
-</ul>
-
-<p>For additional demos see the <a href="index.html">Index of <em>Able Player</em> Examples</a>. In particular, check out the <a href="youtube.html">Simple YouTube Example</a> page.</p>
-
-<div id="wrapper">
-  <div id="chapters"></div>
-  <div id="player-plus">
-    <div id="player">
-      <video data-able-player
-        data-skin="2020"
-        id="video1"
-        preload="auto"
-        data-youtube-id="dhwpLACAls8"
-        data-youtube-desc-id="Ck2TdVMhWcU"
-        data-transcript-div="transcript"
-        data-chapters-div="chapters"
-        data-use-chapters-button="false"
-        data-include-transcript="false"
-        playsinline
-      >
-        <track kind="chapters" src="../media/itaccess_chapters_en.vtt" srclang="en" label="Speakers"/>
-      </video>
+  <section class="usa-banner">
+  <div class="usa-accordion">
+    <header class="usa-banner-header">
+      <div class="usa-grid usa-banner-inner"> <img src="/site/18f/uswds-jekyll/assets/uswds/img/favicons/favicon-57.png" alt="U.S. flag">
+        <p>An official website of the United States government</p> <button class="usa-accordion-button usa-banner-button" aria-expanded="false" aria-controls="gov-banner"> <span class="usa-banner-button-text">Here's how you know</span> </button> </div>
+    </header>
+    <div class="usa-banner-content usa-grid usa-accordion-content" id="gov-banner" aria-hidden="true">
+      <div class="usa-banner-guidance-gov usa-width-one-half"> <img class="usa-banner-icon usa-media_block-img" src="/site/18f/uswds-jekyll/assets/uswds/img/icon-dot-gov.svg" alt="Dot gov">
+        <div class="usa-media_block-body">
+          <p> <strong>The .gov means it’s official.</strong> <br> Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re on a federal government site. </p>
+        </div>
+      </div>
+      <div class="usa-banner-guidance-ssl usa-width-one-half"> <img class="usa-banner-icon usa-media_block-img" src="/site/18f/uswds-jekyll/assets/uswds/img/icon-https.svg" alt="Https">
+        <div class="usa-media_block-body">
+          <p> <strong>The site is secure.</strong> <br> The <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely. </p>
+        </div>
+      </div>
     </div>
-    <div id="transcript"></div>
   </div>
+</section>
+
+
+
+
+
+
+  <header class="usa-header usa-header-extended" role="banner">
+
+
+  
+    <div class="usa-navbar">
+      <button class="usa-menu-btn">Menu</button>
+      <div class="usa-logo" id="extended-mega-logo">
+        <a href="/site/18f/uswds-jekyll/" title="Home">
+          
+            <img class="usa-logo-img" src="https://18f.gsa.gov/assets/img/logos/18f-logo.svg" alt="18F">
+          
+          <em class="usa-logo-text">
+            This is the site title
+          </em>
+        </a>
+      </div>
+    </div>
+
+    <nav role="navigation" class="usa-nav">
+      <div class="usa-nav-inner">
+        <button class="usa-nav-close">
+          <img src="/site/18f/uswds-jekyll/assets/uswds/img/close.svg" alt="close">
+        </button>
+
+        
+        
+        
+        <ul class="usa-nav-primary usa-accordion">
+          
+          <li>
+            
+              <a class=" usa-nav-link   usa-current" href="/site/18f/uswds-jekyll/docs/">
+                <span>Documentation</span>
+              </a>
+            
+          </li>
+          
+          <li>
+            
+              
+              
+              
+            <button class="usa-accordion-button usa-nav-link" aria-expanded="false" aria-controls="nav-2">
+              <span>Navigation section</span>
+            </button>
+            
+            <ul id="nav-2" class="usa-nav-submenu" aria-hidden="true">
+            
+            
+              
+                
+                <li>
+                  <a href="/site/18f/uswds-jekyll/two/a/">Demo link A</a>
+                </li>
+                
+              
+                
+                <li>
+                  <a href="/site/18f/uswds-jekyll/two/b/">Demo link B</a>
+                </li>
+                
+              
+                
+                <li>
+                  <a href="/site/18f/uswds-jekyll/two/c/">Demo link C</a>
+                </li>
+                
+              
+                
+                <li>
+                  <a href="/site/18f/uswds-jekyll/two/a/">Demo link D</a>
+                </li>
+                
+              
+                
+                <li>
+                  <a href="/site/18f/uswds-jekyll/two/b/">Demo link E</a>
+                </li>
+                
+              
+                
+                <li>
+                  <a href="/site/18f/uswds-jekyll/two/c/">Demo link F</a>
+                </li>
+                
+              
+            
+            </ul>
+            
+            
+            
+          </li>
+          
+          <li>
+            
+              
+              
+              
+            <button class="usa-accordion-button usa-nav-link" aria-expanded="false" aria-controls="nav-3">
+              <span>Referenced section</span>
+            </button>
+            
+            <ul id="nav-3" class="usa-nav-submenu" aria-hidden="true">
+            
+            
+              
+                
+                <li>
+                  <a href="/site/18f/uswds-jekyll/docs/">Documentation</a>
+                </li>
+                
+              
+                
+                <li>
+                  <a href="/site/18f/uswds-jekyll/demo/">Demo link</a>
+                </li>
+                
+              
+                
+                <li>
+                  <a href="https://18f.gsa.gov">External link</a>
+                </li>
+                
+              
+            
+            </ul>
+            
+            
+            
+          </li>
+          
+          <li>
+            
+              <a class=" usa-nav-link  " href="https://18f.gsa.gov">
+                <span>External link</span>
+              </a>
+            
+          </li>
+          
+        </ul>
+        
+
+        
+
+          
+          
+          <div class="usa-nav-secondary">
+            
+            <ul class="usa-unstyled-list usa-nav-secondary-links">
+              
+              
+              
+                <li>
+                  <a href="/site/18f/uswds-jekyll/docs/">
+                    Documentation
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/site/18f/uswds-jekyll/theme/">
+                    Theme
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+          
+
+
+        </div>
+      
+    </nav>
+  
+  </header>
+  <div class="usa-overlay"></div>
+
+
+
+
+    
+    
+
+
+    
+
+    
+
+    
+      
+      
+
+
+
+
+    
+    
+
+    <main id="main-content" class="usa-grid usa-section usa-content usa-layout-docs">
+          
+
+  <aside class="usa-layout-docs-sidenav sidenav ">
+    <nav>
+  <ul class="usa-sidenav-list">
+    
+      
+      
+      
+    <li>
+      <a href="/site/18f/uswds-jekyll/docs/" class="usa-current">
+         Sidenav Documentation
+      </a>
+      
+      <ul class="usa-sidenav-sub_list">
+        
+  <li>
+    <a href="#section-one">Section one </a>
+  </li>
+
+  <li>
+    <a href="#section-two">Section two </a>
+  </li>
+
+
+      </ul>
+      
+    </li>
+    
+      
+      
+      
+    <li>
+      <a href="">
+         Sidenav Navigation section
+      </a>
+      
+    </li>
+    
+      
+      
+      
+    <li>
+      <a href="">
+         Sidenav Referenced section
+      </a>
+      
+    </li>
+    
+      
+      
+      
+    <li>
+      <a href="https://18f.gsa.gov">
+         Sidenav External link
+      </a>
+      
+    </li>
+    
+  </ul>
+</nav>
+
+  </aside>
+
+
+<div class="usa-layout-docs-main_content">
+  
+    <h1>Documentation</h1>
+  
+  <h2 id="section-one">Section one</h2>
+
+<p>This is some <a href="https://18f.gsa.gov/">content</a>.</p>
+
+<h3 id="section-two">Section two</h3>
+
+<p>This is some more <a href="javascript:void(0);">content</a>.</p>
+
+<h4 id="section-three">Section three</h4>
+
+<p>This is some more <a href="#">content</a>.</p>
+
+<h5 id="section-four">Section four</h5>
+
+<p>This is some more <a href="https://18f.gsa.gov/">content</a>.</p>
+
+<h6 id="section-five">Section five</h6>
+
+<p>This is some more <a href="https://18f.gsa.gov/">content</a>.</p>
+
+<h6 id="section-six">Section six</h6>
+
+<p>This is some more <a href="https://18f.gsa.gov/">content</a>.</p>
+
+
 </div>
-</body>
-</html>
+    </main>
+
+    
+
+    
+
+
+  
+<footer class="usa-footer usa-footer-medium" role="contentinfo">
+
+  
+
+  
+    <div class="usa-grid usa-footer-return-to-top">
+      <a href="#">Return to top</a>
+    </div>
+  
+
+
+
+  
+    
+    
+    
+    
+  <div class="usa-footer-primary-section">
+    <div class="usa-grid">
+      <nav class="usa-footer-nav">
+        <ul class="usa-unstyled-list">
+          
+          <li class="usa-width-one-third usa-footer-primary-content">
+            <a class="usa-footer-primary-link" href="/site/18f/uswds-jekyll/docs/">
+              Documentation
+            </a>
+          </li>
+          
+          <li class="usa-width-one-third usa-footer-primary-content">
+            <a class="usa-footer-primary-link" href="/site/18f/uswds-jekyll/demo/">
+              Demo link
+            </a>
+          </li>
+          
+          <li class="usa-width-one-third usa-footer-primary-content">
+            <a class="usa-footer-primary-link" href="https://18f.gsa.gov">
+              External link
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="usa-footer-secondary_section">
+    <div class="usa-grid">
+      <div class="usa-footer-logo usa-width-one-half">
+        
+          
+            <img class="usa-footer-logo-img" src="https://18f.gsa.gov/assets/img/logos/18f-logo.svg" alt="18F">
+            
+          
+        
+
+        
+        <h3 class="usa-footer-logo-heading">Name of agency</h3>
+        
+      </div>
+
+      
+      <div class="usa-footer-contact-links usa-width-one-half">
+        
+        
+          
+            <a class="usa-link-facebook" href="https://facebook.com">
+              <span>Facebook</span>
+            </a>
+          
+            <a class="usa-link-twitter" href="https://twitter.com">
+              <span>Twitter</span>
+            </a>
+          
+            <a class="usa-link-youtube" href="https://youtube.com">
+              <span>YouTube</span>
+            </a>
+          
+        
+        
+          <h3 class="usa-footer-contact-heading">Agency contact center</h3>
+          
+          
+            <address>
+              
+              
+                <div class="usa-footer-primary-content usa-footer-contact_info">
+                  <p>
+                    <a href="tel:1-800-555-5555">
+                      (800) CALL-GOVT
+                    </a>
+                  </p>
+                </div>
+              
+                <div class="usa-footer-primary-content usa-footer-contact_info">
+                  <p>
+                    <a href="mailto:info@agency.gov">
+                      info@agency.gov
+                    </a>
+                  </p>
+                </div>
+              
+            </address>
+        
+      
+      
+      </div>
+    </div>
+  </div>
+  
+
+</footer>
+
+
+
+
+
+    
+
+
+
+
+
+  
+<script src="https://federalist-proxy.app.cloud.gov/preview/uswds/uswds/release-2.3.1/dist/js/uswds.min.js" async=""></script>
+
+
+
+
+
+
+  
+
+</body></html>
